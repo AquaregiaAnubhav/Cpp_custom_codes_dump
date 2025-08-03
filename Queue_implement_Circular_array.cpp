@@ -3,11 +3,11 @@
 #define MAX_SIZE 10
 using namespace std;
 
-struct queue{
+typedef struct{
     int front = 0;
     int rear = MAX_SIZE - 1;
     int data[MAX_SIZE];
-};
+} queue;
 
 bool isfull(const queue &q){
     return(q.rear == ((q.front - 2)%MAX_SIZE + MAX_SIZE)%MAX_SIZE);
